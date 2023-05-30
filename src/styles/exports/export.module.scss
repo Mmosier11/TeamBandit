@@ -1,0 +1,28 @@
+// -------------------------------------------------------------------------- //
+//-                               SCSS EXPORTER                              -//
+// -------------------------------------------------------------------------- //
+@use 'sass:meta';
+@use '../colors' as colors;
+@use '../mixins' as mixins;
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+//? ↓ README ↓
+/*
+  This file exports everything in the export-package map;
+  To export something, add it to the export-package map.
+  When imported into a typescript file, you must use the themeUtil function
+  `cssMapExportToObject' in order to convert the exported map into a usable object.
+  Most likely though, you will want to use the `useTheme' hook instead.
+  Also, there will be a file that imports this file and exports the values in the 
+  correct way, so probably you won't need to import this file directly.
+*/
+
+// -------------------------- ↓ Edit Things Here ↓ -------------------------- //
+$export-package: (
+  color: meta.module-variables(colors),
+);
+// -------------------------- ↑ ---------------- ↑ -------------------------- //
+
+// --------------------------- ↓ Export Function ↓ -------------------------- //
+@include mixins.export-map($export-package);
+/* -------------------------------------------------------------------------- */

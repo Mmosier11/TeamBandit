@@ -1,0 +1,47 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "Fyyj7TdJ4fH7hg5tgO8YN",
+      "type": "text",
+      "x": 707.2425537109375,
+      "y": 295.8525085449219,
+      "width": 198.59982299804688,
+      "height": 100,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 33327668,
+      "version": 73,
+      "versionNonce": 1235667852,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1685463998220,
+      "link": null,
+      "locked": false,
+      "text": "- Vercel PostgreSQL\n- Drizzle\n- Clerk\n- OpenAI API",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 92,
+      "containerId": null,
+      "originalText": "- Vercel PostgreSQL\n- Drizzle\n- Clerk\n- OpenAI API",
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

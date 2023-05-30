@@ -1,35 +1,35 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-*/node_modules
-*/.pnp
+/node_modules
+/.pnp
 .pnp.js
 
 # testing
-client/coverage
-public/uploads/documents/*
-*/uploads/*
-Public/emailAttachments/*
+/coverage
+
+# next.js
+/.next/
+/out/
 
 # production
-*/build
+/build
 
 # misc
 .DS_Store
-*.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.sql
+*.pem
 
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-CS476-F21-Teambandit-melssen.pem
+# local env files
+.env*.local
 
-.vscode
-.vscode/*
-website/public/emailAttachments/qjmelssen-30a8a942-3c36-4485-8578-d6cbf893f567.pdf
-*.pdf
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

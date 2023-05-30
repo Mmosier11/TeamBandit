@@ -1,0 +1,65 @@
+// -------------------------------------------------------------------------- //
+//-                                  MIXINS                                  -//
+// -------------------------------------------------------------------------- //
+
+@mixin map-to-css($map, $prefix: '') {
+  @each $name, $value in $map {
+    $new-prefix: $prefix + $name;
+
+    @if type-of($value) == map {
+      $new-prefix: $new-prefix + '-';
+      @include map-to-css($value, $new-prefix);
+    } @else {
+      --#{$new-prefix}: #{$value};
+    }
+  }
+}
+
+@mixin export-map($map, $prefix: '') {
+  @each $name, $value in $map {
+    $new-prefix: $prefix + $name;
+
+    @if type-of($value) == map {
+      $new-prefix: $new-prefix + '-';
+      @include export-map($value, $new-prefix);
+    } @else {
+      :export {
+        #{$new-prefix}: $value;
+      }
+    }
+  }
+}
+
+@mixin importanize($props) {
+  @each $key, $value in $props {
+    #{$key}: #{$value} !important;
+  }
+}
+
+@mixin noScrollbars {
+  & {
+    scrollbar-width: none;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin scrollbars($size: 5px, $color: transparent) {
+  @supports (scrollbar-width: thin) {
+    scrollbar-width: thin;
+    scrollbar-color: $color transparent;
+  }
+
+  &::-webkit {
+    &-scrollbar {
+      width: $size;
+      height: $size;
+
+      &-thumb {
+        background: $color;
+        border-radius: calc($size * 0.5);
+      }
+    }
+  }
+}
